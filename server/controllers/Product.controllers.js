@@ -1,6 +1,6 @@
-// SET UP CONTROLLER
+// 5. SET UP CONTROLLER
 // FULL CRUD
-const Product = require("../models/Product.models")
+const Product = require("../models/Product.models");
 
 module.exports = {
     // READ ALL
