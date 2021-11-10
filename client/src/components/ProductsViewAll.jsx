@@ -27,7 +27,7 @@ const ProductsViewAll = (props) => {
                     return (
                         <p key={product._id}>
                             <Link to={"/products/" + product._id}>
-                                {product.isFavorited ? "&#9733;" : "&#9734;"} | 
+                                {product.isFavorited ? <span>&#9733;</span> : <span>&#9734;</span>} | 
                                 Title: {product.title} | 
                                 Price: {product.price} | 
                                 Description: {product.description} 

@@ -50,7 +50,7 @@ const NewProduct = () => {
 					Description: <textarea onChange={(e) => setDescription(e.target.value)} value={description} />
 				</p>
 				<p>
-					&#9733;?: <input type="checkbox" onChange={(e) => setIsFavorited(e.target.checked)} checked={isFavorited} />
+					<span>&#9733;</span>?: <input type="checkbox" onChange={(e) => setIsFavorited(e.target.checked)} checked={isFavorited} />
 				</p>
 
 				<button>Create</button>
