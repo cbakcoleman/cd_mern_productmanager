@@ -2,6 +2,7 @@ import './App.css';
 import {Link, Switch, Route, Redirect} from 'react-router-dom';
 import ProductsViewAll from './components/ProductsViewAll';
 import NewProduct from './components/NewProduct';
+import ProductsViewOne from './components/ProductsViewOne';
 
 function App() {
   return (
@@ -14,6 +15,10 @@ function App() {
 
 
       <Switch>
+
+        <Route path="/products/:id" >
+          <ProductsViewOne/>
+        </Route>
 
         <Route path="/products">
           <ProductsViewAll/>

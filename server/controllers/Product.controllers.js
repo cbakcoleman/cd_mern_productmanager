@@ -12,7 +12,7 @@ module.exports = {
     // READ ONE
     findOneProduct : (req, res) => {
         Product.findById(req.params.id)
-        .then(oneProduct => res.json({ message: "Success!", product: oneProduct }))
+        .then(oneProduct => res.json({ message: "Success!" , product: oneProduct }))
         .catch(err => res.json({ message: "Pobody's Nerfect!", error: err }));
     },
     // CREATE
