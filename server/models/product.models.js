@@ -1,3 +1,4 @@
+// 4. CREATE THE MODEL SCHEMA
 const mongoose = require("mongoose");
 
 const ProductScheuma = new mongoose.Schema({

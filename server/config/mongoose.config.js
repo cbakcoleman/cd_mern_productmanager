@@ -1,3 +1,4 @@
+// 3. CONNECT TO THE DATABASE
 const mongoose = require("mongoose");
 
 module.exports = (DB) => {
