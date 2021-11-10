@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 const ProductsViewAll = (props) => {
 
@@ -25,10 +26,12 @@ const ProductsViewAll = (props) => {
                 products.map( (product, i) => {
                     return (
                         <p key={product._id}>
-                            {product.isFavorited ? "&#9733;" : "&#9734;"} | 
-                            Title: {product.title} | 
-                            Price: {product.price} | 
-                            Description: {product.description} 
+                            <Link to={"/products/" + product._id}>
+                                {product.isFavorited ? "&#9733;" : "&#9734;"} | 
+                                Title: {product.title} | 
+                                Price: {product.price} | 
+                                Description: {product.description} 
+                            </Link>
                         </p>
                     )
                 })
