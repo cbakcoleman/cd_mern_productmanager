@@ -19,6 +19,18 @@ const ProductsViewAll = (props) => {
             .catch(err => console.log(err))
     }
 
+    const deleteProduct = (deleteId) => {
+        console.log(deleteId);
+        axios.delete("http://localhost:8000/api/products/delete/" + deleteId)
+            .then(res => {
+                console.log(res.data);
+                console.log("Successfully deleted " + deleteId)
+
+                setProducts( products.filter( (product) => product._id !== deleteId ))
+            })
+            .catch(err => console.log(err))
+    }
+
     return (
         <div>
             <h3>All Products</h3>
@@ -32,6 +44,7 @@ const ProductsViewAll = (props) => {
                                 Price: {product.price} | 
                                 Description: {product.description} 
                             </Link>
+                            <button onClick={ ()=> deleteProduct(product._id)}>Delete Product</button>
                         </p>
                     )
                 })

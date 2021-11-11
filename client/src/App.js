@@ -11,7 +11,12 @@ function App() {
       <h1>Product Manager</h1>
       {/* Title: {JSON.stringify(title)} | Price: {JSON.stringify(price)} | Description: {JSON.stringify(description)} */}
       <hr/>
-        <NewProduct/>
+        <p>
+          <Link to={"/products/new"} >Create New Product</Link>
+        </p>
+        <p>
+          <Link to={"/"} >Home</Link>
+        </p>
       <hr/>
 
 
@@ -19,6 +24,10 @@ function App() {
 
         <Route path="/products/update/:id">
           <UpdateProduct/>
+        </Route>
+
+        <Route path="/products/new">
+          <NewProduct/>
         </Route>
 
         <Route path="/products/:id">
